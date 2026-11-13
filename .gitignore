@@ -1,0 +1,11 @@
+# Exclure les fichiers exécutables et temporaires
+*.exe
+*.spec
+build/
+dist/
+.venv/
+__pycache__/
+
+# Exclure les données sensibles
+vault.db
+config.json
