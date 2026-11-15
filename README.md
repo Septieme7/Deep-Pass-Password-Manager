@@ -15,7 +15,7 @@ Reprenez le contrôle de vos données : aucun mot de passe n'est envoyé sur Int
 *   **Scanner de fuites (HIBP)** : Vérifiez si vos mots de passe ont fuité sur Internet (via l'API sécurisée HaveIBeenPwned).
 *   **Tableau de Bord de Sécurité** : Obtenez un score sur 100 et identifiez vos mots de passe faibles, réutilisés ou trop anciens.
 *   **Multi-format** : Importez et exportez facilement votre coffre en **PDF, JSON, CSV ou TXT**.
-*   **Export `.vaultpack`** : Exportez votre coffre complet (chiffré) pour le transférer sur votre téléphone Android. **"App en Création..."**
+*   **Export / Import `.vaultpack`** : Exportez votre coffre complet (chiffré) pour le transférer sur votre téléphone Android, et importez un coffre depuis Android vers votre PC. **"App Android en Création..."**
 *   **Mode System Tray** : Réduisez l'application à côté de l'horloge Windows pour y accéder à tout moment.
 *   **Copie en un clic** : Cliquez directement sur un champ pour le copier. L'URL s'ouvre dans votre navigateur.
 
@@ -32,6 +32,7 @@ Gagnez du temps avec ces raccourcis intégrés :
 | **Exporter le Coffre-fort** | `Ctrl + E` |
 | **Exporter en .vaultpack** | `Ctrl + Shift + E` |
 | **Importer des Comptes** | `Ctrl + I` |
+| **Importer un .vaultpack** | `Ctrl + Shift + I` |
 | **Masquer / Démasquer les mots de passe** | `Ctrl + H` |
 | **Verrouiller immédiatement** | `Ctrl + L` |
 | **Tableau de Bord de Sécurité** | `Ctrl + Shift + S` |
@@ -71,6 +72,21 @@ Vous pouvez exporter votre coffre-fort complet pour le transférer sur votre té
 4.  Sur l'application Android, utilisez "Importer un .vaultpack" et saisissez votre mot de passe maître.
 
 **⚠️ Important** : Le fichier `.vaultpack` contient `vault.db` (chiffré) + `config.json` (sel + hash). Il est **totalement inutilisable sans votre mot de passe maître**. Argon2id rend le brute-force quasi impossible. Mais ne le partagez jamais.
+
+---
+
+## Importer un `.vaultpack` sur PC
+
+Si vous avez un coffre-fort créé sur Android (ou une ancienne sauvegarde `.vaultpack`), vous pouvez le rapatrier sur votre PC :
+
+1.  Dans Deep-Pass (PC), allez dans **Fichier > Importer un .vaultpack...**.
+2.  Sélectionnez votre fichier `.vaultpack`.
+3.  **⚠️ ATTENTION** : L'import **remplace** votre coffre-fort actuel. Tous vos comptes actuels seront écrasés.
+4.  Confirmez l'importation.
+5.  L'application se ferme automatiquement.
+6.  Relancez Deep-Pass et connectez-vous avec le **mot de passe maître du fichier importé**.
+
+**Note** : Cette fonction est utile pour récupérer un coffre depuis Android, restaurer une sauvegarde, ou changer de mot de passe maître (via un `.vaultpack` modifié).
 
 ---
 
