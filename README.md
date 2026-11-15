@@ -15,6 +15,7 @@ Reprenez le contrôle de vos données : aucun mot de passe n'est envoyé sur Int
 *   **Scanner de fuites (HIBP)** : Vérifiez si vos mots de passe ont fuité sur Internet (via l'API sécurisée HaveIBeenPwned).
 *   **Tableau de Bord de Sécurité** : Obtenez un score sur 100 et identifiez vos mots de passe faibles, réutilisés ou trop anciens.
 *   **Multi-format** : Importez et exportez facilement votre coffre en **PDF, JSON, CSV ou TXT**.
+*   **Export `.vaultpack`** : Exportez votre coffre complet (chiffré) pour le transférer sur votre téléphone Android. **"App en Création..."**
 *   **Mode System Tray** : Réduisez l'application à côté de l'horloge Windows pour y accéder à tout moment.
 *   **Copie en un clic** : Cliquez directement sur un champ pour le copier. L'URL s'ouvre dans votre navigateur.
 
@@ -29,6 +30,7 @@ Gagnez du temps avec ces raccourcis intégrés :
 | **Nouveau Compte** | `Ctrl + N` |
 | **Nouvelle Catégorie** | `Ctrl + Shift + N` |
 | **Exporter le Coffre-fort** | `Ctrl + E` |
+| **Exporter en .vaultpack** | `Ctrl + Shift + E` |
 | **Importer des Comptes** | `Ctrl + I` |
 | **Masquer / Démasquer les mots de passe** | `Ctrl + H` |
 | **Verrouiller immédiatement** | `Ctrl + L` |
@@ -46,6 +48,8 @@ Deep-Pass est conçu selon la philosophie **Zero-Knowledge** (Zéro Connaissance
 3.  Cette clé sert à chiffrer vos données locales (AES-256-GCM).
 4.  **Le mot de passe maître n'est jamais stocké en clair.** Si vous le perdez, vos données sont irrécupérables. C'est le prix de la sécurité maximale.
 
+**Le fichier `config.json` ne contient PAS votre clé de chiffrement.** Il contient uniquement le sel et un hash de vérification. La clé AES est recalculée à chaque connexion en RAM, à partir de votre mot de passe maître. Même avec `vault.db` + `config.json`, un attaquant ne peut rien faire sans votre mot de passe maître.
+
 ---
 
 ## Installation
@@ -57,9 +61,29 @@ Deep-Pass est conçu selon la philosophie **Zero-Knowledge** (Zéro Connaissance
 
 ---
 
+## Transférer votre coffre sur mobile (Android) --> **"App en Création..."**
+
+Vous pouvez exporter votre coffre-fort complet pour le transférer sur votre téléphone Android :
+
+1.  Dans Deep-Pass (PC), allez dans **Fichier > Exporter en .vaultpack**.
+2.  Un fichier `DeepPass_AAAA-MM-JJ.vaultpack` est créé (c'est une archive ZIP qui contient `vault.db`, `config.json` et un fichier LISEZ-MOI).
+3.  Transférez ce fichier sur votre téléphone via un câble USB (jamais par email ou cloud public).
+4.  Sur l'application Android, utilisez "Importer un .vaultpack" et saisissez votre mot de passe maître.
+
+**⚠️ Important** : Le fichier `.vaultpack` contient `vault.db` (chiffré) + `config.json` (sel + hash). Il est **totalement inutilisable sans votre mot de passe maître**. Argon2id rend le brute-force quasi impossible. Mais ne le partagez jamais.
+
+---
+
 ## ⚠️ Avertissement important pour vos données
 
 Vos données sont précieusement conservées dans votre dossier utilisateur Windows :
 `%APPDATA%\Deep-Pass\vault.db`
 
 **Pensez à sauvegarder régulièrement ce fichier `vault.db`** (sur une clé USB, un disque dur externe, ou dans un cloud sécurisé). En cas de plantage de votre PC, ce fichier est votre seul moyen de retrouver vos mots de passe.
+
+<img width="1917" height="1027" alt="Screenshot-1-Deep-Pass" src="https://github.com/user-attachments/assets/b53c295a-c5dc-48e2-91a5-dd3410b6b22f" />
+<img width="1919" height="1031" alt="Screenshot-2-Deep-Pass" src="https://github.com/user-attachments/assets/e7fd9873-4652-48dc-9fdb-f61c7ae4096a" />
+<img width="1917" height="1032" alt="Screenshot-3-Deep-Pass" src="https://github.com/user-attachments/assets/fbf11bb6-726f-4c22-a7a1-74ae3b3ffb1d" />
+<img width="1918" height="1030" alt="Screenshot-4-Deep-Pass" src="https://github.com/user-attachments/assets/f35a53ca-c534-45f9-bc50-7df7ecfa8e43" />
+
+By Seven & Vous...
