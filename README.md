@@ -12,7 +12,7 @@ Reprenez le contrôle de vos données : aucun mot de passe n'est envoyé sur Int
 *   **Interface Premium** : 8 thèmes visuels dégradés (Rouge Rubis, Vert Émeraude, Rose Néon...) et 5 fonds d'écran intégrés. L'interface s'adapte à la taille de police que vous choisissez.
 *   **Générateur de mots de passe** : Créez des mots de passe ultra-forts en un clic.
 *   **Support 2FA / TOTP** : Stockez vos clés de double authentification et visualisez les codes à 6 chiffres en temps réel.
-*   **Scanner de fuites (HIBP)** : Vérifiez si vos mots de passe ont fuité sur Internet (via l'API sécurisée HaveIBeenPwned).
+*   **Scanner de fuites (HIBP)** : Vérifiez si vos mots de passe ont fuité sur Internet (via l'API sécurisée HaveIBeenPwned, dans le respect total de votre anonymat).
 *   **Tableau de Bord de Sécurité** : Obtenez un score sur 100 et identifiez vos mots de passe faibles, réutilisés ou trop anciens.
 *   **Multi-format** : Importez et exportez facilement votre coffre en **PDF, JSON, CSV ou TXT**.
 *   **Export / Import `.vaultpack`** : Exportez votre coffre complet (chiffré) pour le transférer sur votre téléphone Android, et importez un coffre depuis Android vers votre PC. **"App Android en Création..."**
@@ -50,6 +50,21 @@ Deep-Pass est conçu selon la philosophie **Zero-Knowledge** (Zéro Connaissance
 4.  **Le mot de passe maître n'est jamais stocké en clair.** Si vous le perdez, vos données sont irrécupérables. C'est le prix de la sécurité maximale.
 
 **Le fichier `config.json` ne contient PAS votre clé de chiffrement.** Il contient uniquement le sel et un hash de vérification. La clé AES est recalculée à chaque connexion en RAM, à partir de votre mot de passe maître. Même avec `vault.db` + `config.json`, un attaquant ne peut rien faire sans votre mot de passe maître.
+
+### 🌐 Et le scanner de fuites (HIBP) ?
+
+Deep-Pass ne transmet **aucune donnée** sur Internet. La seule exception est le **scanner de fuites**, que vous devez **lancer manuellement**.
+
+**Ce qui est envoyé à l'API Have I Been Pwned :**
+- Uniquement les **5 premiers caractères** du hash SHA-1 de votre mot de passe.
+
+**Ce qui n'est JAMAIS envoyé :**
+- Votre mot de passe en clair.
+- Votre mot de passe hashé complet.
+- Votre identifiant, email, ou toute autre donnée personnelle.
+
+**Comment ça marche (k-Anonymity) :**
+L'API reçoit les 5 premiers caractères et renvoie tous les hashs qui commencent par ces caractères. Votre application compare ensuite localement le reste du hash. **L'API ne sait jamais quel mot de passe vous avez cherché.** Votre anonymat est totalement préservé.
 
 ---
 
