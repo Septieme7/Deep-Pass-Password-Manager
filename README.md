@@ -21,23 +21,22 @@ Reprenez le contrôle de vos données : aucun mot de passe n'est envoyé sur Int
 
 ---
 
-## Raccourcis Clavier
+## 📋 Raccourcis Clavier & Options de Menus
 
-Gagnez du temps avec ces raccourcis intégrés :
-
-| Action | Raccourci |
-| :--- | :--- |
-| **Nouveau Compte** | `Ctrl + N` |
-| **Nouvelle Catégorie** | `Ctrl + Shift + N` |
-| **Exporter le Coffre-fort** | `Ctrl + E` |
-| **Exporter en .vaultpack** | `Ctrl + Shift + E` |
-| **Importer des Comptes** | `Ctrl + I` |
-| **Importer un .vaultpack** | `Ctrl + Shift + I` |
-| **Masquer / Démasquer les mots de passe** | `Ctrl + H` |
-| **Verrouiller immédiatement** | `Ctrl + L` |
-| **Tableau de Bord de Sécurité** | `Ctrl + Shift + S` |
-| **Vérifier les Fuites (HIBP)** | `Ctrl + Shift + F` |
-| **Réinitialiser le Coffre-fort** | `Ctrl + Shift + R` |
+| Action | Raccourci | Description |
+| :--- | :--- | :--- |
+| **Nouveau Compte** | `Ctrl + N` | Ouvre le formulaire de création de compte |
+| **Nouvelle Catégorie** | `Ctrl + Shift + N` | Crée une catégorie sur-mesure |
+| **Exporter le Coffre-fort** | `Ctrl + E` | Exporte le coffre (JSON, CSV, TXT, PDF) |
+| **Exporter en .vaultpack** | `Ctrl + Shift + E` | Exporte l'archive sécurisée multi-plateforme |
+| **Importer des Comptes** | `Ctrl + I` | Importe des comptes (JSON, CSV, TXT) |
+| **Importer un .vaultpack** | `Ctrl + Shift + I` | Importe et restaure une archive `.vaultpack` |
+| **Masquer / Démasquer les données** | `Ctrl + H` | Bascule l'affichage global de toutes les données sensibles |
+| **Verrouiller le coffre-fort** | `Ctrl + L` | Verrouille immédiatement la session |
+| **Tableau de Bord de Sécurité** | `Ctrl + Shift + A` | Ouvre l'audit de sécurité et score /100 |
+| **Vérifier les Fuites (HIBP)** | `Ctrl + Shift + F` | Analyse les mots de passe contre HaveIBeenPwned |
+| **Réinitialiser le Coffre-fort** | `Ctrl + Shift + R` | Réinitialise complètement le coffre-fort |
+| **Préférences & Paramètres** | `Ctrl + P` | Ouvre la fenêtre des thèmes et de configuration |
 
 ---
 
