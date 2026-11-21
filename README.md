@@ -9,11 +9,16 @@ Reprenez le contrôle de vos données : aucun mot de passe n'est envoyé sur Int
 ## Fonctionnalités Principales
 
 *   **Sécurité de niveau militaire** : Vos données sont chiffrées avec **AES-256-GCM** et protégées par votre mot de passe maître (dérivation **Argon2id**).
-*   **Interface Premium** : 8 thèmes visuels dégradés (Rouge Rubis, Vert Émeraude, Rose Néon...) et 5 fonds d'écran intégrés. L'interface s'adapte à la taille de police que vous choisissez.
+*   **6 langues complètes** : Français, Anglais, Espagnol, Allemand, Italien, Portugais avec sélecteur direct dans les Paramètres.
+*   **Interface Premium (15 thèmes)** : 15 thèmes visuels dégradés soignés, **Mode Clair / Sombre activable sur CHACUN des 15 thèmes**, et 5 fonds d'écran intégrés. L'interface s'adapte à la taille de police que vous choisissez.
+*   **2 modes d’affichage** : Basculez en un clic entre la **Vue Liste** classique et la **Vue Grille (cartes)**.
+*   **Cartes bancaires multiples** : Support de multiples cartes par compte avec lecture formatée par blocs de 4 et boutons pour copier séparément chaque champ (Titulaire, Numéro, Date MM/AA, CVV, PIN).
+*   **Pièces jointes liées au compte** : Stockage chiffré par flux AES-256-GCM, masquage individuel (nom et poids), visionneuse d'image avec zoom et recadrage interactif sauvegardé dans le coffre, et export groupé en archive `.zip`.
+*   **Nettoyeur EXIF sélectif pour images** : Inspection des balises sensibles (GPS, appareil, date/heure, logiciel, notes) sur toutes les images du coffre avec nettoyage en groupe, ou sur n'importe quelle image externe du PC.
 *   **Générateur de mots de passe** : Créez des mots de passe ultra-forts en un clic.
 *   **Support 2FA / TOTP** : Stockez vos clés de double authentification et visualisez les codes à 6 chiffres en temps réel.
 *   **Scanner de fuites (HIBP)** : Vérifiez si vos mots de passe ont fuité sur Internet (via l'API sécurisée HaveIBeenPwned, dans le respect total de votre anonymat).
-*   **Tableau de Bord de Sécurité** : Obtenez un score sur 100 et identifiez vos mots de passe faibles, réutilisés ou trop anciens.
+*   **Tableau de Bord de Sécurité** : Obtenez un score sur 100 et identifiez vos mots de passe faibles, réutilisés ou trop anciens, avec correction directe au clic.
 *   **Multi-format** : Importez et exportez facilement votre coffre en **PDF, JSON, CSV ou TXT**.
 *   **Export / Import `.vaultpack`** : Exportez votre coffre complet (chiffré) pour le transférer sur votre téléphone Android, et importez un coffre depuis Android vers votre PC. **"App Android en Création..."**
 *   **Mode System Tray** : Réduisez l'application à côté de l'horloge Windows pour y accéder à tout moment.
@@ -32,9 +37,13 @@ Reprenez le contrôle de vos données : aucun mot de passe n'est envoyé sur Int
 | **Importer des Comptes** | `Ctrl + I` | Importe des comptes (JSON, CSV, TXT) |
 | **Importer un .vaultpack** | `Ctrl + Shift + I` | Importe et restaure une archive `.vaultpack` |
 | **Masquer / Démasquer les données** | `Ctrl + H` | Bascule l'affichage global de toutes les données sensibles |
+| **Tout sélectionner** | `Ctrl + A` | Coche tous les comptes de la liste |
+| **Tout désélectionner** | `Ctrl + D` | Décoche tous les comptes sélectionnés |
+| **Supprimer la sélection** | `Suppr` (`Delete`) | Supprime définitivement les comptes cochés |
 | **Verrouiller le coffre-fort** | `Ctrl + L` | Verrouille immédiatement la session |
 | **Tableau de Bord de Sécurité** | `Ctrl + Shift + A` | Ouvre l'audit de sécurité et score /100 |
 | **Vérifier les Fuites (HIBP)** | `Ctrl + Shift + F` | Analyse les mots de passe contre HaveIBeenPwned |
+| **Nettoyeur EXIF sélectif** | `Ctrl + Shift + X` | Ouvre le nettoyeur et désinfecteur EXIF d'images |
 | **Réinitialiser le Coffre-fort** | `Ctrl + Shift + R` | Réinitialise complètement le coffre-fort |
 | **Préférences & Paramètres** | `Ctrl + P` | Ouvre la fenêtre des thèmes et de configuration |
 
