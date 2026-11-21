@@ -53,6 +53,7 @@ Seule la dernière version de Deep-Pass reçoit des correctifs de sécurité.
 
 | Version | Supportée |
 | :--- | :---: |
+| v7.5.x | ✅ Oui |
 | v7.4.x | ✅ Oui |
 | v7.3.x | ✅ Oui |--> **-Bug-**
 | v7.2.x | ✅ Oui |
